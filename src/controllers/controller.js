@@ -123,6 +123,9 @@ exports.loggedFeed = (req, res) => {
 
 //ADD A POST TO THE FIELD
 exports.postFeed = (req, res) => {
+    if (typeof req.file == 'undefined') {
+        req.file = {filename:''}
+    }
     let feedObj = {
         "user": req.body.username,
         "text": req.body.textContent,
