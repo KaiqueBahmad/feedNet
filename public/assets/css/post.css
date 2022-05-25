@@ -1,0 +1,49 @@
+:root {
+    --person-blue-h: rgb(50, 50, 160);
+    --person-blue-m: rgb(30, 30, 160);
+    --person-blue-l: rgb(13, 13, 160);
+    --person-oak: rgb(94, 21, 21);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--person-blue-m);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titlo {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#focus {
+    font-size: large;
+    width: 60%;
+    background-color: var(--person-blue-h);
+    height: 85vh;
+}
+#postForm {
+    height: 100%;
+    background-color: var(--person-blue-l);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#postForm > * {
+    margin: 5px;
+}
+.preview {
+    background-color: var(--person-blue-h);
+    display: flex;
+    flex-direction: column;
+}
+.preview img {
+    max-width: 300px;
+}

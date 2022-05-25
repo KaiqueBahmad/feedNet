@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to NetFeed</title>
+    <link rel="stylesheet" href="/assets/css/loginTheme.css">
+</head>
+<body>
+
+<section id="wave"></section>
+<!--
+LOGIN FORM SECTION 
+-->
+<section id="loginSection">
+    <div id="login"> <!-- I'm going to split loginSection into 2 sides, a side for login, and other to redirect to register page-->
+        <h1>login</h1>
+        <form id="loginForm" action="/login" method="post">
+            <input type="text" name="username" id="">
+            <input type="password" name="password" id="">
+            <input id="submitLogin" type="submit" value="login">
+        </form>
+    </div>
+    <div id="register">
+        <h1>register</h1>
+        <form id="loginForm" action="/register" method="post">
+            <input placeholder="Choose a username" type="text" name="username" id="">
+            <input placeholder="Your main email here" type="email" name="email" id="">
+            <input placeholder="Choose a safe password" type="password" name="password" id="">
+            <input placeholder="repeat your password" type="password" name="passwordAgain" id="">
+            <input id="submitLogin" type="submit" value="register">
+        </form>
+    </div>
+</section>
+<!--
+    IMG WITH LOGO || FORM WITH DATA (INPUTS || BUTTON) 
+-->
+
+
+
+</body>
+</html>

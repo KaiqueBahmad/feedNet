@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/feed.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav><p>Global Feed</p>
+
+        <% if (typeof username == 'undefined' && typeof token== 'undefined') { %>
+            <button onclick="window.location.href='/'" id="post">Login</button>
+            
+            <% } else{ %>
+                <form action="/newpost" method="post">
+                    <input type="hidden" name="username" value="<%= username %>">
+                    <input type="hidden" name="token" value="<%= token %>">
+                    <input id="post" type="submit" value="New Post">
+                </form>
+            <% } %>
+             
+
+    </nav>
+
+    
+    <section id="feedRoll">
+        <ul id="feedUl">
+            <% for( let index = 0; index < array.length; index++ ) { %>
+            <li class="feedItem">
+                <div><p class="itemUser"><%= array[index]['user'] %> </p>
+                    <img class="itemImg" alt="" src="<%= array[index]['img'] %>">
+                </div>
+                <div class="itemText">
+                    <p><%= array[index]['text'] %> </p>
+                </div>
+                
+            </li>
+            <% } %>
+        </ul>
+    </section>
+    
+</body>
+</html>

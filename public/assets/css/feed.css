@@ -1,0 +1,74 @@
+:root {
+    --person-blue-h: rgb(50, 50, 160);
+    --person-blue-m: rgb(30, 30, 160);
+    --person-blue-l: rgb(13, 13, 160);
+    --person-oak: rgb(94, 21, 21);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+body {
+    background-color: var(--person-blue-m);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#feedRoll {
+    background-color: var(--person-blue-h);
+    width: 60%;
+}
+.feedItem > img {
+    max-width: 80%;
+}
+
+body > nav {
+    width: 100%;
+    height: 8%;
+    padding: 3px;
+    display: flex;
+    background-color: var(--person-blue-l);
+    justify-content: space-evenly;
+    align-items: center;
+}
+#post {
+    padding: 5px;
+}
+
+#feedUl {
+    background-color: var(--person-blue-h);
+    overflow-y:scroll;
+}
+
+/*CSS FOR POST*/
+.feedItem {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 5px;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    border-bottom: 2px solid black;
+}
+.itemUser {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 10px;
+    background-color: black;
+}
+.itemImg {
+    max-height: 300px;
+    background-color: rgb(197, 197, 197);
+    border: 1px solid black;
+}
+.itemText {
+    height: 300px;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,65 @@
+:root {
+    --person-blue-h: rgb(50, 50, 160);
+    --person-blue-m: rgb(30, 30, 160);
+    --person-blue-l: rgb(13, 13, 160);
+    --person-oak: rgb(94, 21, 21);
+}
+
+
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg,var(--person-blue-h),var(--person-blue-l));
+}
+
+/*CSS FOR LOGIN*/
+#loginSection {
+    max-height: 300px;
+    max-width: 500px;
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--person-oak);
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+#login {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 90%;
+    width: 50%;
+    max-width: 252.5px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+#loginForm {
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+/*STYLE FOR ITENS OF FORM*/
+#loginForm > * {
+    margin-top: 2px;
+}
+#submitLogin {
+    margin-top: 15px;
+}
+
+/*STYLE FOR REGISTER*/
+#register {
+    border-left: 1px solid black;
+    width: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-left: 10px;
+    height: 90%;
+    text-align: center;
+}
