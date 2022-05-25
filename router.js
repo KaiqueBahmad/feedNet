@@ -21,17 +21,15 @@ router.post('/login', Controller.authLogin, (req, res, next) => {
 , Controller.loggedFeed)
 
 
-router.post('/feed',
-    upload.single('imgFile'),
-    (req, res, next) => {
-        console.log(req.body)
-        if (req.body.token in sessionsAlive) {
-            sessionsAlive[req.body.token] == req.body.username ? next() : res.send('token não correspondente');
-        } else {
-            res.send('token inválido')
-        }
-    }, 
-    Controller.postFeed
+router.post('/feed',upload.single('imgFile'),
+(req, res, next) => {
+    console.log(req.body)
+    if (req.body.token in sessionsAlive) {
+        sessionsAlive[req.body.token] == req.body.username ? next() : res.send('token não correspondente');
+    } else {
+        res.send('token inválido')
+    }
+}, Controller.postFeed
 )
 
 router.post('/newpost', (req, res)=>{
@@ -41,4 +39,3 @@ router.post('/newpost', (req, res)=>{
 router.get('/sessions', (req, res)=>{res.send(sessionsAlive)})
 router.get('/test', Controller.test)
 module.exports = router;
-//    res.render('post-create', {'username':req.body.username, 'uuid':identifier}) #colinha
